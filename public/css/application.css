@@ -1,0 +1,91 @@
+.container {
+  margin: 20px auto;
+  width: 800px;
+  padding: 0px 20px 20px 20px;
+  border: 1px dotted black;
+}
+
+.container h1 {
+  font-size: 17pt;
+}
+
+th {
+  text-align: left;
+}
+
+nav .brand, nav .brand a {
+  margin-left: 25px;
+  font-size: 18pt;
+  text-decoration: none;
+  color: #444;
+  width: 60%;
+  display: inline-block;
+}
+
+form label {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+p.errors {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  color: brown;
+}
+
+form.quirks {
+  display: inline-block;
+}
+
+.submit {
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+  float: left;
+  text-align: right;
+  margin-right: 20px;
+  width: 200px;
+}
+
+#sign-out input {
+  border:none;
+  background:none;
+  font-weight: :bold;
+}
+
+#welcome {
+  background-image: url(summer.png);
+  width: 700px;
+  height: 450px;
+  line-height: 400px;
+  border-radius: 1em;
+  text-align: center;
+  margin: auto;
+  border: 1px solid gold;
+  box-shadow: 8px 8px 5px #888888;
+}
+
+#welcome h1 {
+  font-size: 2.3em;
+}
+
+#hello {
+  font-size: 1.5em;
+  background-image: url(summer.png);
+  width: 50%;
+  display: inline-block;
+  margin-right: 25%;
+  margin-left: 25%;
+  text-align: center;
+  border-radius: 0.5em;
+  border: 2px solid gold;
+  box-shadow: 8px 8px 5px #888888;
+  margin-bottom: 2em;
+}

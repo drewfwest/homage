@@ -1,0 +1,28 @@
+<div id="hello">
+  <h1>Hello <%= current_user.name.split.first.capitalize %>!</h1>
+</div>
+
+<% @notes.each do |note| %>
+  <a href="/notes/<%= "#{note.id}" %>">
+    <div id="note">
+      <div id="header">
+        <div id="header_left">
+          <p class="title"><%= note.title %></p>
+          <p class="timestamp"><%= note.created_at.strftime('%e %b %Y') %></p>
+        </div>
+        <div id="header_right">
+          <p class="user_name"><%= note.user.name.split.first %></p>
+        </div>
+      </div>
+      <p class="note_content" ><%= note.content %></p>
+    </div>
+  </a>
+<% end %>
+<!-- BUGBUG Is this view logic or better in a helper method? -->
+
+<div id="user_list">
+  <p class="title">Users</p>
+  <% @users.each do |user| %>
+   <p><%= user.name %></p>
+  <% end %>
+</div>

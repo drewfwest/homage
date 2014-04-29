@@ -1,0 +1,94 @@
+button {
+  background-color: #ff944d;
+  border-radius: 0.4em;
+  border: 1px solid black;
+  box-shadow: 0.5px 0.5px #888888;
+  margin-bottom: 1.2em;
+}
+
+  button:hover{
+    background-color: #ff8533;
+    border: 1.5px solid black;
+    box-shadow: 1px 1px #888888;
+  }
+
+#note {
+  width: 50%;
+  display: inline-block;
+  margin-right: 25%;
+  margin-left: 25%;
+  border-radius: 0.5em;
+  border: 1.5px solid black;
+  box-shadow: 8px 8px 5px #888888;
+  background-image: url(note.jpg);
+  margin-bottom: 1.2em;
+  opacity: 0.85;
+  text-align: center;
+}
+
+  #note:hover {
+    opacity: 1;
+  }
+
+  #note p {
+    padding-bottom: 0.8em;
+    color: black;
+    font-weight: bold;
+  }
+
+  #note #header {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 0;
+    border-bottom: 1px solid black;
+    text-align: left;
+  }
+
+  #note #header_left {
+    float: left;
+    margin-left: 1em;
+  }
+
+    p.title {
+      font-size: 14pt;
+      margin-bottom: -0.7em;
+    }
+
+    p.timestamp {
+      font-style: italic;
+      font-size: 10pt;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+  #note #header_right {
+    float: right;
+    margin-right: 2.5em;
+  }
+
+    p.user_name {
+      font-size: ;
+      font-family: cursive;
+    }
+
+  p.note_content{
+    text-align: center;
+  }
+
+#user_list {
+  width: 8%;
+  margin-left: 0;
+  text-align: left;
+  border-radius: 0.5em;
+  border: 1.5px solid blue;
+  box-shadow: 6px 6px 5px #888888;
+  background: linear-gradient(top, #00478f 20%, #ffffff 80%);
+  background: -moz-linear-gradient(top, #00478f 20%, #ffffff 80%);
+  background: -webkit-linear-gradient(top, #00478f 20%,#ffffff 80%);
+}
+
+#user_list p {
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+}
