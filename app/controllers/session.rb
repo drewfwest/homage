@@ -10,8 +10,9 @@ end
 
 post '/sessions' do
   @user = User.find_by_email(params[:email])
-
-  if @user && @user.password == params[:password_hash]
+  p @user.password
+  p @user.password_hash
+  if @user && @user.password == params[:password]
     session[:user_id] = @user.id
     redirect '/notes'
   else
