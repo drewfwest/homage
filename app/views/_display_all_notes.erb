@@ -11,7 +11,7 @@
           <p class="timestamp"><%= note.created_at.strftime('%e %b %Y') %></p>
         </div>
         <div id="header_right">
-          <p class="user_name"><%= note.user.name.split.first %></p>
+          <p class="user_name"><%= User.find(note.user_id).name.split.first %></p>
         </div>
       </div>
       <p class="note_content" ><%= note.content %></p>
