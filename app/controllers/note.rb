@@ -17,7 +17,7 @@ get '/notes/new' do
 end
 
 post '/notes' do
-  Note.create(params)
+  @note = Note.create(title: params[:title], content: params[:content], user_id: session[:user_id])
   redirect '/notes'
 end
 
