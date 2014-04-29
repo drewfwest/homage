@@ -1,0 +1,18 @@
+<div id="note">
+  <div id="header">
+    <div id="header_left">
+      <p class="title"><%= @note.title %></p>
+      <p class="timestamp"><%= @note.created_at.strftime('%e %b %Y') %></p>
+    </div>
+    <div id="header_right">
+      <p class="user_name"><%= current_user.name.split.first %></p>
+    </div>
+  </div>
+  <p class="note_content"><%= @note.content %></p>
+
+  <form method="post" action="/notes/<%= @note.id %>">
+    <input type="hidden" name="_method" value="delete">
+    <button type="submit" onClick="return confirm('Do you really want to delete this note?');">Delete</button>
+  </form>
+
+</div>

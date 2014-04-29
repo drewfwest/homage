@@ -1,0 +1,21 @@
+<nav>
+  <% if current_user %>
+    <ul>
+      <li><a href="/notes">Read Notes</a></li>
+      <li><a href="/notes/new">New Note</a></li>
+      <li><a href="/notes/:id/edit">Edit Notes</a></li>
+      <li><a href="/notes/:id/destroy">Delete Notes</a></li>
+      <li>
+        <form id="sign-out" action="/sessions/<%= current_user.id %>" method="post">
+          <input name="_method" type="hidden" value="delete" />
+          <input type="submit" value="Sign Out">
+        </form>
+      </li>
+    </ul>
+  <% else %>
+    <ul>
+      <li><a href="/sessions/new">Sign In</a></li>
+      <li><a href="/users/new">Sign Up</a></li>
+    </ul>
+  <% end %>
+</nav>
