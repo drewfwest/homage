@@ -1,22 +1,18 @@
-<div class="container">
+<form id="form" method="post" action="/users">
   <h1>Sign Up</h1>
+  <label class="label" for="name">Name</label>
+  <input type="text" name="name" placeholder="name" >
+  <br>
 
-  <form id="sign-up" method="post" action="/users">
-    <label class="label" for="name">Name</label>
-    <input type="text" name="name" placeholder="name" >
-    <br>
+  <label class="label" for="email">Email</label>
+  <input type="email" name="email" placeholder="email address" >
+  <br>
 
-    <label class="label" for="email">Email</label>
-    <input type="email" name="email" placeholder="email address" >
-    <br>
+  <label class="label" for="password">Password</label>
+  <input type="password" name="password_hash" placeholder="password">
+  <br>
 
-    <label class="label" for="password">Password</label>
-    <input type="password" name="password_hash" placeholder="password">
-    <br>
-
-    <div class="submit"><input type="submit" value="Sign Up"></div>
-  </form>
-
-</div>
+  <input type="submit" value="Sign Up">
+</form>
 
 <%= erb :_errors %>

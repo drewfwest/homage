@@ -1,35 +1,59 @@
-.container {
+body {
+  font-family: 'Merriweather Sans', sans-serif;
+  /*font-family: 'Rock Salt', cursive;*/
+  background-size: 100%;
+  background-image: url(summer.png);
+  background-repeat: none;
+  /*position: relative;*/
+}
+
+form {
   margin: 20px auto;
-  width: 800px;
+  width: 700px;
   padding: 0px 20px 20px 20px;
-  border: 1px dotted black;
+  border: 1px solid black;
+
+  background-image: url(summer.png);
+  background-size: 100%;
+  border-radius: 1em;
+
+  margin: auto;
+  border: 1px solid black;
+  box-shadow: 4px 4px 5px #888888;
 }
 
-.container h1 {
-  font-size: 17pt;
+form input {
+  margin-bottom: 6px;
 }
 
-th {
-  text-align: left;
-}
+  form h1 {
+    text-align: center;
+    font-size: 20pt;
+  }
 
-nav .brand, nav .brand a {
-  margin-left: 25px;
-  font-size: 18pt;
-  text-decoration: none;
-  color: #444;
-  width: 60%;
-  display: inline-block;
-}
+ /* padding: 20px 20px 20px 20px;
+  border: 1px dotted black;*/
 
-form label {
-  font-weight: bold;
-  margin-right: 20px;
-}
+  form label {
+    font-weight: bold;
+  }
 
-input {
-  margin-bottom: 10px;
-}
+  form input[type="submit"] {
+    background-color: #ff944d;
+    border-radius: 0.4em;
+    border: 1px solid black;
+    box-shadow: 0.5px 0.5px #888888;
+    margin-bottom: 1em;
+    display: block;
+    text-align: center;
+  }
+
+  form input[type="submit"]:hover {
+    background-color: #ff8533;
+    border: 1.5px solid black;
+    box-shadow: 1px 1px #888888;
+  }
+
 
 p.errors {
   margin: 0;
@@ -42,22 +66,12 @@ form.quirks {
   display: inline-block;
 }
 
-.submit {
-  text-align: center;
-}
-
 .label {
   font-weight: bold;
   float: left;
   text-align: right;
   margin-right: 20px;
   width: 200px;
-}
-
-#sign-out input {
-  border:none;
-  background:none;
-  font-weight: :bold;
 }
 
 #welcome {
@@ -68,7 +82,7 @@ form.quirks {
   text-align: center;
   margin: auto;
   border: 1px solid gold;
-  box-shadow: 8px 8px 5px #888888;
+  box-shadow: 4px 4px 5px #888888;
 }
 
 #welcome h1 {
@@ -86,6 +100,6 @@ form.quirks {
   text-align: center;
   border-radius: 0.5em;
   border: 2px solid gold;
-  box-shadow: 8px 8px 5px #888888;
+  box-shadow: 4px 4px 5px #888888;
   margin-bottom: 2em;
 }

@@ -1,3 +1,10 @@
+form#delete {
+  width: 50%;
+  border: none;
+  background-image: none;
+  box-shadow: none;
+}
+
 button {
   background-color: #ff944d;
   border-radius: 0.4em;
