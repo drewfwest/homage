@@ -1,7 +1,7 @@
 <form id="form" method="post" action="/sessions">
   <h1>Sign In</h1>
   <label class="label" for="email">Email</label>
-  <input type="email" name="email" placeholder="email address" value="<%= @email %>">
+  <input type="email" name="email" placeholder="email address" value="<%= flash[:user_input][0] if flash[:user_input] %>">
   <% if !@user %>
     <%= erb :_errors %>
   <% end %>
