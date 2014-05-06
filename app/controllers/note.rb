@@ -1,6 +1,6 @@
 get '/notes' do
   if current_user
-    @notes = Note.all
+    @notes = Note.all.reverse
     @users = User.all
     erb :_display_all_notes
   else

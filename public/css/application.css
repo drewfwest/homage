@@ -51,6 +51,15 @@ form input {
     box-shadow: 1px 1px #888888;
   }
 
+  form#new-note input {
+    margin-top: 2em;
+    display: block;
+  }
+
+  form#new-note textarea {
+    margin-top: 2em;
+    display: block;
+  }
 
 p.errors {
   margin: 0;
