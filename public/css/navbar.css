@@ -1,6 +1,4 @@
 nav {
-/*  width: 100%;
-  height: 40px;*/
   text-align: center;
   padding-bottom: 40px;
   font-weight: bold;
@@ -45,7 +43,7 @@ li {
     color: #ffffff;
   }
 
-  nav ul li a:active {
+  nav ul li:active a {
     color: #ffffff;
   }
 
@@ -54,3 +52,23 @@ nav ul li a {
   padding: 25px 30px;
   color: #303030; text-decoration: none;
 }
+
+form#sign-out {
+  width: 50%;
+  border: none;
+  background-image: none;
+  box-shadow: none;
+}
+
+  form#sign-out input {
+    border:none;
+    background:none;
+    box-shadow: none;
+    opacity: 0.8;
+    font-weight: bold;
+  }
+
+  form#sign-out input:hover {
+    opacity: 0.9;
+    color: #ffffff;
+  }

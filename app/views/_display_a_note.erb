@@ -10,7 +10,7 @@
   </div>
   <p class="note_content"><%= @note.content %></p>
 
-  <form method="post" action="/notes/<%= @note.id %>">
+  <form id="delete" method="post" action="/notes/<%= @note.id %>">
     <input type="hidden" name="_method" value="delete">
     <button type="submit" onClick="return confirm('Do you really want to delete this note?');">Delete</button>
   </form>
