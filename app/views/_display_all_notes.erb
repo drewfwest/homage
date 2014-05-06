@@ -1,5 +1,6 @@
 <div id="hello">
   <h1>Hello <%= current_user.name.split.first.capitalize %>!</h1>
+  <%= erb :_gravatar %>
 </div>
 
 <% @notes.each do |note| %>
