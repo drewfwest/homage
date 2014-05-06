@@ -31,9 +31,6 @@ form input {
     font-size: 20pt;
   }
 
- /* padding: 20px 20px 20px 20px;
-  border: 1px dotted black;*/
-
   form label {
     font-weight: bold;
   }
@@ -102,4 +99,18 @@ form.quirks {
   border: 2px solid gold;
   box-shadow: 4px 4px 5px #888888;
   margin-bottom: 2em;
+}
+
+#hello h1 {
+  display: inline-block;
+}
+
+img#gravatar {
+  margin: 1em 1em 0.5em 0;
+  border-radius: 25px;
+  border: 1px solid black;
+}
+
+#grav_div {
+  float: right;
 }
