@@ -24,6 +24,8 @@ form {
 
 form input {
   margin-bottom: 6px;
+  box-shadow: 0.5px 0.5px #888888;
+  border-radius: 10px;
 }
 
   form h1 {
@@ -54,11 +56,15 @@ form input {
   form#new-note input {
     margin-top: 2em;
     display: block;
+    box-shadow: 0.5px 0.5px #888888;
+    border-radius: 10px;
   }
 
   form#new-note textarea {
     margin-top: 2em;
     display: block;
+    box-shadow: 0.5px 0.5px #888888;
+    border-radius: 10px;
   }
 
 p.errors {
