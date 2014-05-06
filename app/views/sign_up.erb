@@ -1,7 +1,7 @@
 <form id="form" method="post" action="/users">
   <h1>Sign Up</h1>
   <label class="label" for="name">Name</label>
-  <input type="text" name="name" placeholder="name" >
+  <input type="text" name="name" placeholder="name" value="<%= flash[:user_input][0] if flash[:user_input] %>">
   <br>
 
   <label class="label" for="email">Email</label>

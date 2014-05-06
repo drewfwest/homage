@@ -9,9 +9,8 @@ get '/sessions/new' do
 end
 
 post '/sessions' do
+  flash[:user_input] = get_messages(params)
   @user = User.find_by_email(params[:email])
-  p @user.password
-  p @user.password_hash
   if @user && @user.password == params[:password]
     session[:user_id] = @user.id
     redirect '/notes'
@@ -37,6 +36,7 @@ get '/users/new' do
 end
 
 post '/users' do
+  flash[:user_input] = get_messages(params)
   @user = User.new(name: params[:name], email: params[:email])
   @user.password = params[:password_hash]
   @user.save!
@@ -48,6 +48,10 @@ post '/users' do
     session[:user_id] = @user.id
     redirect '/notes'
   else
+    if @user.name = false
+      flash[:notice] = flash[:notice][0]
+    else
       erb :sign_up
+    end
   end
 end
