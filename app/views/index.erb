@@ -2,3 +2,10 @@
   <h1>Homage</h1>
   <h2>noun: special honor or respect shown publicly</h2>
 </div>
+
+<div>
+  <p>
+    <strong>token:</strong><%= @access_token.token if @access_token %><br>
+    <strong>secret:</strong><%= @access_token.secret if @access_token %><br>
+  </p>
+</div>

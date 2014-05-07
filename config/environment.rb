@@ -23,6 +23,12 @@ require 'bcrypt'
 require 'rack-flash'
 require 'digest/md5'
 
+#OAuth
+require 'oauth'
+require 'dotenv'
+require 'twitter'
+
+Dotenv.load
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 

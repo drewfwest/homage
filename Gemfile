@@ -20,6 +20,10 @@ gem 'rack-flash3'
 
 gem 'shotgun'
 
+gem 'oauth'
+gem 'dotenv'
+gem 'twitter'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

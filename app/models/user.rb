@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
   has_many :notes
 
-  validates :name, presence: {message: "Please provide your name." }
-  validates :email, presence: {message: "Please provide a valid email address."}
+  # Removing presence validations to integraet with Twitter OAuth
+  # validates :name, presence: {message: "Please provide your name." }
+  # validates :email, presence: {message: "Please provide a valid email address."}
   validates_uniqueness_of :name, :email
   # BUGBUG: Using BCrpyt, I can't validate presence of password
 

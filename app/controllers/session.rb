@@ -1,4 +1,5 @@
 get '/' do
+  session.delete(:request_token)
   erb :index
 end
 
@@ -20,13 +21,49 @@ post '/sessions' do
     else
       flash[:notice] = ["Password is incorrect"]
     end
-      erb :sign_in
+    erb :sign_in
   end
 end
 
 delete '/sessions/:id' do
   session.clear
   redirect '/'
+end
+
+#----------- SESSIONS/TWITTER -----------
+
+get '/sessions/twitter/new' do
+# the 'request_token' method is defined in 'app/helpers/oauth.rb'
+  redirect request_token.authorize_url
+end
+
+get '/auth' do
+  # the 'request_token' method is defined in 'app/helpers/oauth.rb'
+  @access_token = request_token.get_access_token(:oauth_verifier => params[:oauth_verifier])
+  # our request token is only valid until we use it to get an access token, so let's delete it from our session
+  p @access_token
+  p '*'*50
+  p params
+  session.delete(:request_token)
+  @user = User.find_or_create_by(oauth_token: params["oauth_token"], oauth_verifier: params["oauth_verifier"])
+  p @user
+
+  if @user
+    session[:user_id] = @user.id
+    p session
+    redirect '/notes'
+  else
+    p '*'*50
+    p 'LOGIN FAILED'
+    p '*'*50
+    # display a message to the user describing the error
+    redirect '/sessions/new'
+  end
+  # create a user account
+  # store the access token. You can use this token to later
+  # initialize a TwitterAPI::Client object and make calls to the Twitter API.
+  # @user = User.create(username: @access_token.params[:screen_name], oauth_token: params[:oauth_token], oauth_secret: params[:oauth_verifier])
+  # erb :index
 end
 
 #----------- USERS -----------
