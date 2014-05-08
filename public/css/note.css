@@ -28,6 +28,10 @@ button {
   border: 1.5px solid black;
   box-shadow: 6px 6px 5px #888888;
   background-image: url(note.jpg);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   margin-bottom: 1.2em;
   opacity: 0.85;
   text-align: center;

@@ -20,6 +20,9 @@ gem 'rack-flash3'
 
 gem 'shotgun'
 
+gem 'dotenv'
+gem 'goodreads'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
