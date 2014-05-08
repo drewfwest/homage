@@ -3,7 +3,7 @@ body {
   /*font-family: 'Rock Salt', cursive;*/
   background-size: 100%;
   background-image: url(summer.png);
-  background-repeat: none;
+  background-attachment: fixed;
   /*position: relative;*/
 }
 

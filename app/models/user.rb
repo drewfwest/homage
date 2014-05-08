@@ -18,4 +18,8 @@ class User < ActiveRecord::Base
     self.password_hash = @password
   end
 
+  def update(attributes)
+    self.create attributes if changed?
+  end
+
 end

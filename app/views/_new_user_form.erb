@@ -1,5 +1,6 @@
-<form method="post" action="/users">
-  <h1>Sign Up</h1>
+<form method="post" action="/users/twitter">
+  <h1>New to Homage?</h1>
+  <h3>(Only the first time)</h3>
   <label class="label" for="name">Name</label>
   <input type="text" name="name" placeholder="name" value="<%= flash[:user_input][0] if flash[:user_input] %>">
   <br>
@@ -8,11 +9,5 @@
   <input type="email" name="email" placeholder="email address" >
   <br>
 
-  <label class="label" for="password">Password</label>
-  <input type="password" name="password_hash" placeholder="password">
-  <br>
-
   <input type="submit" value="Sign Up">
 </form>
-
-<%= erb :_errors %>

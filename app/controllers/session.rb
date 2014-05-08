@@ -46,18 +46,19 @@ get '/auth' do
   p params
   session.delete(:request_token)
   @user = User.find_or_create_by(oauth_token: params["oauth_token"], oauth_verifier: params["oauth_verifier"])
+  session[:user_id] = @user.id
   p @user
 
-  if @user
-    session[:user_id] = @user.id
-    p session
+  if !!@user.name
+  #   p session
     redirect '/notes'
   else
-    p '*'*50
-    p 'LOGIN FAILED'
-    p '*'*50
-    # display a message to the user describing the error
-    redirect '/sessions/new'
+    erb :_new_user_form
+  #   p '*'*50
+  #   p 'LOGIN FAILED'
+  #   p '*'*50
+  #   # display a message to the user describing the error
+  #   redirect '/sessions/new'
   end
   # create a user account
   # store the access token. You can use this token to later
@@ -91,4 +92,9 @@ post '/users' do
       erb :sign_up
     end
   end
+end
+
+post '/users/twitter' do
+  current_user.update(params)
+  redirect '/notes'
 end
