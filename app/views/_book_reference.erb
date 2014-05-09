@@ -1,0 +1,7 @@
+<% if @books %>
+  <% @books.covers.each do |img| %>
+    <img src="<%= img %>">
+  <% end %>
+<%   else %>
+  No Results
+<%   end %>

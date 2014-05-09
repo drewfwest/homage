@@ -23,6 +23,8 @@ require 'bcrypt'
 require 'rack-flash'
 require 'digest/md5'
 
+require 'pry'
+
 require 'dotenv'
 Dotenv.load
 require 'goodreads'
@@ -49,6 +51,7 @@ end
 # Set up the controllers and helpers
 Dir[APP_ROOT.join('app', 'controllers', '*.rb')].each { |file| require file }
 Dir[APP_ROOT.join('app', 'helpers', '*.rb')].each { |file| require file }
+Dir[APP_ROOT.join('app', 'models', '*.rb')].each { |file| require file }
 
 # Set up the database and models
 require APP_ROOT.join('config', 'database')

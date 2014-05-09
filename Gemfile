@@ -23,6 +23,9 @@ gem 'shotgun'
 gem 'dotenv'
 gem 'goodreads'
 
+gem 'pry'
+
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

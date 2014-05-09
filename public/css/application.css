@@ -8,7 +8,6 @@ html {
   background-size: cover;
 }
 
-
 body {
 }
 
@@ -91,15 +90,23 @@ form.quirks {
   width: 200px;
 }
 
-#welcome {
-  background-image: url(summer.png);
-  width: 700px;
-  height: 450px;
-  border-radius: 1em;
+.holder {
   text-align: center;
-  margin: auto;
+  background-image: url(summer.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  border-radius: 0.5em;
+  width: 70%;
+  margin-right: 15%;
+  margin-left: 15%;
   border: 1px solid gold;
   box-shadow: 4px 4px 5px #888888;
+}
+
+#welcome {
+  height: 450px;
 }
 
 #welcome h1 {
@@ -109,19 +116,6 @@ form.quirks {
 
 #hello {
   font-size: 1.5em;
-  background-image: url(summer.png);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 50%;
-  display: inline-block;
-  margin-right: 25%;
-  margin-left: 25%;
-  text-align: center;
-  border-radius: 0.5em;
-  border: 2px solid gold;
-  box-shadow: 4px 4px 5px #888888;
   margin-bottom: 2em;
 }
 
